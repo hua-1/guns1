@@ -1,0 +1,38 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="标识" underline="true"/>
+                            <#input id="cName" name="名字" underline="true"/>
+                            <#input id="sequence" name="序列" underline="true"/>
+                            <#input id="subSequence" name="子排序" underline="true"/>
+                            <#input id="parentId" name="父id" underline="true"/>
+                            <#input id="tenantId" name="租户id" underline="true"/>
+                            <#input id="ownerId" name="归属人id"/>
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="createdTime" name="创建时间" underline="true"/>
+                            <#input id="lastModifiedBy" name="最后修改人" underline="true"/>
+                            <#input id="lastModifiedTime" name="最后修改时间" underline="true"/>
+                            <#input id="createdBy" name="创建人" underline="true"/>
+                            <#input id="valid" name="是否回显" underline="true"/>
+                            <#input id="remark" name="备注" underline="true"/>
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="TCategoryInfoDlg.addSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="TCategoryInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/system/tCategory/tCategory_info.js"></script>
+@}
